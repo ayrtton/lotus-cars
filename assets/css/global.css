@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --nav-color: #000040;
-  	--bg-color: #202084;
+    --dark-blue: #000040;
+  	--mid-blue: #202084;
 }
 
 body {

@@ -2,7 +2,7 @@
 @import url('global.css');
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--mid-blue);
 }
 
 body::before {
@@ -18,7 +18,7 @@ body::before {
 }
 
 .menu {
-    background-color: var(--nav-color);
+    background-color: var(--dark-blue);
     padding: 1.2rem 0;
     width: 100%;
     text-align: center;
@@ -31,9 +31,10 @@ body::before {
     margin: 0 1.25rem;
 }
 
+/* Cards */
 .container {
     position: relative;
-    margin-top: 6%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -42,7 +43,7 @@ body::before {
 .card {
     border: 0.5rem solid white;
     width: calc(100% / 3 - 5%);
-    height: 60vh;
+    height: 62vh;
     position: relative;
 }
 
@@ -60,6 +61,7 @@ body::before {
     object-fit: cover;
     position: relative;
     overflow: visible;
+    transition: .5s ease-in-out;
 }
 
 .card__title {
@@ -70,4 +72,46 @@ body::before {
     position: absolute;
     width: 100%;
     bottom: 0;
+}
+
+/* Carousel Controller */
+.controller {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
+.controller__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--mid-blue);
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.controller__button:hover {
+  transform: scale(1.2);
+}
+
+.controller__button:nth-child(2) {
+    margin: 0 3.75rem;
+}
+
+.controller__line {
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
 }
