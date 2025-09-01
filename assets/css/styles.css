@@ -34,8 +34,14 @@ body::before {
 
 .menu__icon {
     width: 2.5rem;
+    width: 9%;
     margin: 0 1.25rem;
     vertical-align: middle;
+}
+
+.menu__icon-img {
+    width: 100%;
+    object-fit: contain;
 }
 
 /* Cards */
@@ -153,9 +159,8 @@ body[id^="card-"]::before {
 }
 
 body[id^="card-"] .card:not(.card--hovered) {
-    filter: grayscale(100%);
     filter: opacity(30%) blur(2px);
-    
+    transform: scale(.9);
 }
 
 .card--hovered .card__title {

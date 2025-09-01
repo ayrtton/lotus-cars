@@ -1,0 +1,44 @@
+@import url('reset.css');
+@import url('global.css');
+@import url('components/navigator.css');
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap; 
+    background-color: var(--mid-blue); 
+}
+
+.left-column {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.main-content{
+    height: 100%;
+    width: 100%;
+    padding-left: 130px;
+    position: relative;
+}
+
+.main-content__top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-content__bottom{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
