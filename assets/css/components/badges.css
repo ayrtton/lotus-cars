@@ -1,0 +1,17 @@
+.badges__list{
+    display: flex;
+    flex-direction: row;
+}
+
+.badges__list-item {
+    background-color: var(--mid-blue);
+    color: white;
+    padding: .6rem 1.2rem;
+    margin: 0 10px;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.badges__list-item:first-child {
+    margin-left: 0;
+}

@@ -1,12 +1,13 @@
 @import url('reset.css');
 @import url('global.css');
 @import url('components/navigator.css');
+@import url('components/badges.css');
 
 .wrapper {
     display: flex;
     height: 100vh;
     flex-flow: row nowrap; 
-    background-color: var(--mid-blue); 
+    background-color: var(--dark-blue); 
 }
 
 .left-column {
@@ -22,7 +23,7 @@
     z-index: 1;
 }
 
-.main-content{
+.main-content {
     height: 100%;
     width: 100%;
     padding-left: 130px;
@@ -36,9 +37,32 @@
     justify-content: flex-start;
 }
 
-.main-content__bottom{
+.main-content__bottom {
     height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.main-content__top-logo img {
+    margin-top: 9vh;
+    margin-left: 0;
+    margin-bottom: 30px;
+    width: 25%;
+}
+
+.description{
+    background-color: rgba(255, 255, 255, 0.12);
+    max-width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.description__text p{
+    color: white;
+    line-height: 180%;
+}
+
+.badges {
+    margin-bottom: 20px;
 }
