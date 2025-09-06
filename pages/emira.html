@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lotus Cars</title>
         <link rel="stylesheet" href="../assets/css/pages.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     </head>
-    <body>
+    <body class="emira">
         <div class="wrapper">
             <div class="left-column">
                 <nav class="navigator">
@@ -58,20 +59,27 @@
                 </div>
                 <div class="main-content__bottom">
                     <div class="gallery">
-                        <ul>
-                            <li>
-                                <img src="../../assets/images/emira/gallery/image-01.jpg" alt="">
+                        <ul class="gallery__list">
+                            <li class="gallery__list-item">
+                                <a data-fancybox href="../../assets/images/emira/gallery/image-01.jpg">
+                                    <img class="gallery__list-image" src="../../assets/images/emira/gallery/image-01.jpg" alt="">
+                                </a>
                             </li>
-                            <li>
-                                <img src="../../assets/images/emira/gallery/image-02.jpg" alt="">
+                            <li class="gallery__list-item">
+                                <a data-fancybox href="../../assets/images/emira/gallery/image-02.jpg">
+                                    <img class="gallery__list-image" src="../../assets/images/emira/gallery/image-02.jpg" alt="">
+                                </a>
                             </li>
-                            <li>
-                                <img src="../../assets/images/emira/gallery/image-03.jpg" alt="">
+                            <li class="gallery__list-item">
+                                <a data-fancybox href="../../assets/images/emira/gallery/image-03.jpg">
+                                    <img class="gallery__list-image" src="../../assets/images/emira/gallery/image-03.jpg" alt="">
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     </body>
 </html>

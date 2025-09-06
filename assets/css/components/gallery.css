@@ -3,23 +3,22 @@
     padding-left: 0;
 }
 
-.gallery ul {
+.gallery__list {
     display: flex;
     flex-direction: row;
 }
 
-.gallery ul li {
+.gallery__list-item {
     margin-left: 25px;
-
-    height: 30vh;
+    height: 24vh;
     aspect-ratio: 16/9;
 }
 
-.gallery ul li:first-child {
+.gallery__list-item:first-child {
     margin-left: 0px;
 }
 
-.gallery img {
+.gallery__list-image {
     border: solid .2rem white;
     border-radius: 10px;
     height: 100%;
