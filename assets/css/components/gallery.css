@@ -1,0 +1,27 @@
+.gallery {
+    padding: 7vh;
+    padding-left: 0;
+}
+
+.gallery ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery ul li {
+    margin-left: 25px;
+
+    height: 30vh;
+    aspect-ratio: 16/9;
+}
+
+.gallery ul li:first-child {
+    margin-left: 0px;
+}
+
+.gallery img {
+    border: solid .2rem white;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
