@@ -29,6 +29,11 @@ body::before {
     opacity: 0.25;
 }
 
+.elise::before {
+    background-image: url('../images/elise/gallery/bg.jpg');
+    opacity: 0.2;
+}
+
 .wrapper {
     display: flex;
     height: 100vh;
@@ -69,16 +74,20 @@ body::before {
     justify-content: flex-end;
 }
 
+.main-content__top-logo {
+    height: 20vh;
+}
+
 .main-content__top-logo img {
     margin-top: 9vh;
     margin-left: 0;
     margin-bottom: 30px;
-    width: 25%;
+    height: 27%;
 }
 
 .description{
     background-color: rgba(255, 255, 255, 0.15);
-    max-width: 60%;
+    max-width: 65%;
     padding: 20px;
     border-radius: 10px;
 }
