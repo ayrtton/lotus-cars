@@ -18,30 +18,36 @@ body::before {
     transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-.menu {
+.nav {
+    display: flex;
+    align-items: center;
     background-color: var(--dark-blue);
-    padding: 1.2rem 0;
+    height: 10vh;
     width: 100%;
     text-align: center;
     position: relative;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
 .menu__item {
-    display: inline-block;
     text-transform: uppercase;
     margin: 0 1.25rem;
 }
 
 .menu__icon {
-    width: 2.5rem;
-    width: 9%;
+    display: flex;
+    width: 8%;
     margin: 0 1.25rem;
-    vertical-align: middle;
 }
 
 .menu__icon-img {
     width: 100%;
-    object-fit: contain;
 }
 
 /* Cards */
@@ -51,13 +57,13 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    perspective: 5000px;
+    perspective: 2500px;
 }
 
 .card {
     border: 0.5rem solid white;
     width: 100%;
-    height: 62vh;
+    height: 55vh;
     position: absolute;
     transition: filter 0.5s ease-in-out;
 }
@@ -101,15 +107,23 @@ body::before {
 }
 
 .card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(48vw);
+    transform: rotateY(0deg) translateZ(50vw);
 }
 
 .card:nth-child(2) {
-    transform: rotateY(120deg) translateZ(48vw);
+    transform: rotateY(72deg) translateZ(50vw);
 }
 
 .card:nth-child(3) {
-    transform: rotateY(240deg) translateZ(48vw);
+    transform: rotateY(144deg) translateZ(50vw);
+}
+
+.card:nth-child(4) {
+    transform: rotateY(216deg) translateZ(50vw);
+}
+
+.card:nth-child(5) {
+    transform: rotateY(288deg) translateZ(50vw);
 }
 
 /* Carousel Controller */
@@ -150,8 +164,8 @@ body::before {
     transform: scale(1.2);
 }
 
-.controller__button:nth-child(2) {
-    margin: 0 3.75rem;
+.controller__button {
+    margin: 0 2rem;
 }
 
 .controller__line {
@@ -168,7 +182,7 @@ body::before {
 
 .card--hovered .card__image {
     transform: scale(1.2);
-    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, .5));
 }
 
 body#card-01-hovered::before {
