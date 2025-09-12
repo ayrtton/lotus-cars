@@ -194,7 +194,15 @@ body#card-02-hovered::before {
 }
 
 body#card-03-hovered::before {
+    background-image: url('../images/evora-bg-02.jpg');
+}
+
+body#card-04-hovered::before {
     background-image: url('../images/elise-bg-02.jpg');
+}
+
+body#card-05-hovered::before {
+    background-image: url('../images/emeya-bg-02.jpg');
 }
 
 body[id^="card-"]::before {

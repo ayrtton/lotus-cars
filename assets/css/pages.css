@@ -29,9 +29,19 @@ body::before {
     opacity: 0.25;
 }
 
+.evora::before {
+    background-image: url('../images/evora/gallery/bg.jpg');
+    opacity: 0.25;
+}
+
 .elise::before {
     background-image: url('../images/elise/gallery/bg.jpg');
     opacity: 0.2;
+}
+
+.emeya::before {
+    background-image: url('../images/emeya/gallery/bg.jpg');
+    opacity: 0.3;
 }
 
 .wrapper {
@@ -56,7 +66,7 @@ body::before {
 .main-content {
     height: 100%;
     width: 100%;
-    padding-left: 130px;
+    padding-left: 170px;
     position: relative;
 }
 
