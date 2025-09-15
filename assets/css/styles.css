@@ -1,218 +1,61 @@
 @import url('reset.css');
 @import url('global.css');
+@import url('components/navbar.css');
 
 body {
     background-color: var(--mid-blue);
 }
 
-body::before {
-    content: "";
-    background-image: url('../images/bg-image.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.3;
-    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    background-color: var(--dark-blue);
-    height: 10vh;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.menu__item {
-    text-transform: uppercase;
-    margin: 0 1.25rem;
-}
-
-.menu__icon {
-    display: flex;
-    width: 8%;
-    margin: 0 1.25rem;
-}
-
-.menu__icon-img {
-    width: 100%;
-}
-
-/* Cards */
 .container {
+    height: 90vh;
     position: relative;
-    margin-top: 5%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    perspective: 2500px;
-}
+    justify-content: center;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+} 
 
-.card {
-    border: 0.5rem solid white;
-    width: 100%;
-    height: 55vh;
+.container::before {
+    content: ""; 
     position: absolute;
-    transition: filter 0.5s ease-in-out;
-}
-
-.card__background {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+    background: var(--mid-blue);
+    opacity: .3;
 }
 
-.card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
-    transition: .8s ease-in-out;
-}
-
-.card__title {
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    transition: bottom 1s ease-in-out;
-}
-
-/* Cards Carousel */
-.cards-carousel {
+.hero {
     display: flex;
-    justify-content: center;
-    width: calc(100vw / 3);
-    transform-style: preserve-3d;
-    transition: transform .4s ease-in;
-}
-
-.card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(50vw);
-}
-
-.card:nth-child(2) {
-    transform: rotateY(72deg) translateZ(50vw);
-}
-
-.card:nth-child(3) {
-    transform: rotateY(144deg) translateZ(50vw);
-}
-
-.card:nth-child(4) {
-    transform: rotateY(216deg) translateZ(50vw);
-}
-
-.card:nth-child(5) {
-    transform: rotateY(288deg) translateZ(50vw);
-}
-
-/* Carousel Controller */
-.controller {
-    position: absolute;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
-    bottom: 1.5rem;
-    width: 100%;
-}
-
-.controller__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-color: var(--mid-blue);
-    text-align: center;
-    font-size: 1rem;
-    cursor: pointer;
     z-index: 1;
-    transition: transform 0.5s ease-in-out;
+    height: 22%;  
+    font-family: "Noto Sans", sans-serif;
 }
 
-.controller__button--active {
-    background-color: white;
-    color: var(--mid-blue);
-    border: 0.1875rem solid var(--mid-blue);
-    outline: 0.125rem solid white;
+.hero__headline {
+    font-family: inherit;
+    font-size: clamp(2rem, 2.8vw, 4rem);
+    font-style: italic;
+    font-weight: 200;
 }
 
-.controller__button:hover {
-    transform: scale(1.2);
+.hero__button {
+    display: grid; 
+    place-items: center;
+    height: 32%;
+    width: 32%;
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
+    border: .1rem solid white;
+    border-radius: .5vw;
+    background-color: rgba(0, 0, 150, .3);
+    transition: 0.4s ease-in-out;
 }
 
-.controller__button {
-    margin: 0 2rem;
-}
-
-.controller__line {
-    background-color: white;
-    width: 50%;
-    height: 2px;
-    position: absolute;
-}
-
-/* Card Hover Animation */
-.card--hovered .card__background {
-    opacity: 0;
-}
-
-.card--hovered .card__image {
-    transform: scale(1.2);
-    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, .5));
-}
-
-body#card-01-hovered::before {
-    background-image: url('../images/emira-bg-02.jpg');
-}
-
-body#card-02-hovered::before {
-    background-image: url('../images/evija-bg-02.jpg');
-}
-
-body#card-03-hovered::before {
-    background-image: url('../images/evora-bg-02.jpg');
-}
-
-body#card-04-hovered::before {
-    background-image: url('../images/elise-bg-02.jpg');
-}
-
-body#card-05-hovered::before {
-    background-image: url('../images/emeya-bg-02.jpg');
-}
-
-body[id^="card-"]::before {
-    opacity: 1;
-}
-
-body[id^="card-"] .card:not(.card--hovered) {
-    filter: opacity(30%) blur(2px);
-}
-
-.card--hovered .card__title {
-    bottom: 50%;
+.hero__button:hover {
+    transform: scale(1.1);
+    background-color: transparent;
 }
