@@ -1,0 +1,43 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-blue);
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5vw;
+}
+
+.menu__item {
+    text-transform: uppercase;
+    width: 7%;
+}
+
+.menu__github {
+    text-transform: lowercase;
+    position: absolute;
+    right: 2vw;
+    height: 50%;
+}
+
+.menu__github img {
+    height: 100%;
+}
+
+.menu__icon {
+    display: flex;
+    width: 6.5%;
+}
+
+.menu__icon-img {
+    width: 100%;
+}
