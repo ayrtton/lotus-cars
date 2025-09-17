@@ -1,6 +1,7 @@
 @import url('reset.css');
 @import url('global.css');
 @import url('components/navbar.css');
+@import url('components/footer.css');
 
 body {
     background-color: var(--mid-blue);
@@ -49,13 +50,17 @@ body {
     height: 32%;
     width: 32%;
     font-size: clamp(1rem, 1.2vw, 1.8rem);
-    border: .1rem solid white;
+    border: .08rem solid white;
     border-radius: .5vw;
-    background-color: rgba(0, 0, 150, .3);
+    background: color-mix(in srgb, var(--mid-blue) 20%, white 15%);
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     transition: 0.4s ease-in-out;
 }
 
 .hero__button:hover {
     transform: scale(1.1);
-    background-color: transparent;
+    background-color: color-mix(in srgb, var(--mid-blue) 30%, white 0%);
+    box-shadow: 4px 4px 30px rgba(255, 255, 255, 0.3);
 }

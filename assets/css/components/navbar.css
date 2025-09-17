@@ -10,6 +10,7 @@
 }
 
 .menu {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +20,17 @@
 .menu__item {
     text-transform: uppercase;
     width: 7%;
+}
+
+.menu__github {
+    text-transform: lowercase;
+    position: absolute;
+    right: 2vw;
+    height: 50%;
+}
+
+.menu__github img {
+    height: 100%;
 }
 
 .menu__icon {
